@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css links -->
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="./js/script.js"></script>
+    <link
+      rel="icon"
+      href="./images/favicon(flaticon).png"
+      type="image/s-icon"
+    />
+    <title>SneakCity | Ecommerce sneaker store</title>
+  </head>
+  <body>
+    <header class="header sticky">
+      <div class="logo">
+        <a href="#"
+          ><div style="display: inline">SneakCity</div>
+          <span>.</span></a
+        >
+      </div>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="#about" class="main-nav-link">About</a></li>
+          <li><a href="#shop" class="main-nav-link">Shop</a></li>
+          <li><a href="#collections" class="main-nav-link">Collections</a></li>
+          <li><a href="#reviews" class="main-nav-link">Reviews</a></li>
+        </ul>
+      </nav>
+
+      <nav class="action-nav">
+        <ul class="action-nav-list">
+          <li>
+            <div class="search-fn active">
+              <div class="search-input">
+                <input type="text" placeholder="Search" id="search-input" />
+              </div>
+              <ion-icon
+                class="icon icon-action-nav icon-search"
+                name="search-outline"
+              ></ion-icon>
+            </div>
+          </li>
+          <li>
+            <div class="sign-in-btn">
+              <ion-icon
+                class="icon icon-action-nav sign-in-icon"
+                name="person-outline"
+              ></ion-icon>
+            </div>
+          </li>
+          <li>
+            <div class="wishlist-btn">
+              <a href="wishlist.html">
+                <ion-icon
+                  class="icon icon-action-nav"
+                  name="heart-outline"
+                ></ion-icon>
+              </a>
+            </div>
+          </li>
+          <li class="cart-list">
+            <div class="cart-icon">
+              <ion-icon
+                class="icon icon-action-nav"
+                name="cart-outline"
+              ></ion-icon>
+              <div class="cart-bubble">0</div>
+            </div>
+            <div class="mini-cart hidden">
+              <div class="view-cart-button">
+                <a href="cart.html">VIEW CART</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-btn">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+    <main>
+      <div class="toast cart-toast">
+        <i class="bx bx-list-check"></i>
+        <p>Item has been added to cart</p>
+      </div>
+      <div class="toast remove-toast">
+        <i class="bx bx-list-minus"></i>
+        <p>Item has been added to cart</p>
+      </div>
+      <div class="toast wishlist-toast">
+        <i class="bx bxs-heart"></i>
+        <p class="wish-toast-msg">Item has been added to wishlist</p>
+      </div>
+      <div class="loading-screen">
+        <img src="images/page-loadscreen.gif" alt="" />
+      </div>
+      <section class="section-hero">
+        <div class="hero-container">
+          <div class="hero-text-box">
+            <h1 class="heading-primary hero-text">
+              Authentic Sneakers for you and your loved ones
+            </h1>
+            <div class="hero-buttons">
+              <a href="#cta" class="sign-up-btn btn btn--full margin-right-sm"
+                >SIGN UP</a
+              >
+              <a href="product.html" class="btn btn--outline btn-ordernow"
+                >ORDER NOW
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="images/hero-img.png" alt="White Nike Air Jordan 4" />
+          </div>
+        </div>
+      </section>
+      <section class="section-about" id="about">
+        <div class="about-container">
+          <h2 class="heading-secondary">About us</h2>
+          <p class="about-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            officiis, sunt ipsa voluptatibus nemo enim aut quos nostrum, unde
+            repellat iusto animi vel qui fugit minus quam inventore, sit velit
+            autem cum! Ipsum hic perferendis possimus sunt distinctio aut
+            repudiandae soluta velit blanditiis expedita temporibus pariatur
+            provident asperiores id iusto, consequatur ea recusandae placeat
+            molestiae a voluptates. Iste, impedit tempora.
+          </p>
+        </div>
+      </section>
+      <section class="section-shop" id="shop">
+        <div class="shop-container">
+          <h2 class="heading-secondary center">&mdash; Our Products &mdash;</h2>
+          <div class="products-container"></div>
+        </div>
+        <div class="all-items-link">
+          <a href="product.html">View all products </a>
+        </div>
+      </section>
+      <div class="product-modal-container"></div>
+      <section class="section-collection" id="collections">
+        <h2 class="heading-secondary center">COLLECTIONS</h2>
+        <div class="collection-container">
+          <a href="product.html"
+            ><div class="collection-item image-hidden">
+              <img
+                src="images/collections-women(3).jpg"
+                alt="Women's Collection"
+              />
+              <div class="collection-label heading-secondary">WOMENS</div>
+            </div></a
+          >
+
+          <a href="product.html"
+            ><div class="collection-item image-hidden">
+              <img src="images/collections-men(3).jpg" alt="Men's Collection" />
+              <div class="collection-label heading-secondary">MENS</div>
+            </div></a
+          >
+
+          <a href="product.html"
+            ><div class="collection-item image-hidden">
+              <img src="images/collections-kid(3).jpg" alt="Kids' Collection" />
+              <div class="collection-label heading-secondary">KIDS</div>
+            </div></a
+          >
+        </div>
+      </section>
+      <section class="section-features">
+        <div class="feature">
+          <i class="feature-icon bx bx-check-circle"></i>
+          <div class="feature-text">100% Authenticity</div>
+        </div>
+        <div class="feature">
+          <i class="feature-icon bx bxs-truck"></i>
+          <div class="feature-text">Fast Delivery</div>
+        </div>
+        <div class="feature">
+          <i class="feature-icon bx bx-dollar-circle"></i>
+          <div class="feature-text">Low Shipping Costs</div>
+        </div>
+      </section>
+
+      <!-- REVIEW SECTION -->
+
+      <section class="section-review" id="reviews">
+        <div class="slider">
+          <div class="slide slide--1">
+            <address class="review-author">
+              <div class="review-image">
+                <img
+                  src="images/testimonial_img1.jpg"
+                  alt=""
+                  class="review-photo"
+                />
+              </div>
+              <h6 class="review-name">Aarav Lynn</h6>
+              <p class="review-location">San Francisco, USA</p>
+            </address>
+            <h5 class="review-header">Best footwear decision ever!</h5>
+            <blockquote class="review-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Accusantium quas quisquam non? Quas voluptate nulla minima
+              deleniti optio ullam nesciunt, numquam corporis et asperiores
+              laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+              id alias reiciendis, perferendis facere pariatur dolore veniam
+              autem esse non voluptatem saepe provident nihil molestiae.
+            </blockquote>
+          </div>
+
+          <div class="slide slide--2">
+            <address class="review-author">
+              <div class="review-image">
+                <img
+                  src="images/testimonial_img2.jpg"
+                  alt=""
+                  class="review-photo"
+                />
+              </div>
+              <h6 class="review-name">Miyah Miles</h6>
+              <p class="review-location">London, UK</p>
+            </address>
+            <h5 class="review-header">
+              I'm never getting sneakers anywhere else
+            </h5>
+            <blockquote class="review-text">
+              Quisquam itaque deserunt ullam, quia ea repellendus provident,
+              ducimus neque ipsam modi voluptatibus doloremque, corrupti
+              laborum. Incidunt numquam perferendis veritatis neque repellendus.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+              deserunt exercitationem deleniti.
+            </blockquote>
+          </div>
+
+          <div class="slide slide--3">
+            <address class="review-author">
+              <div class="review-image">
+                <img
+                  src="images/testimonial_img3.jpg"
+                  alt=""
+                  class="review-photo"
+                />
+              </div>
+              <h6 class="review-name">Francisco Gomes</h6>
+              <p class="review-location">Lisbon, Portugal</p>
+            </address>
+            <h5 class="review-header">
+              Finally, a store with good prices and fantastic quality!!
+            </h5>
+            <blockquote class="review-text">
+              Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+              incidunt commodi architecto numquam omnis nulla autem,
+              necessitatibus blanditiis modi similique quidem. Odio aliquam
+              culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
+              deleniti saepe aliquid quos inventore sequi. Necessitatibus id
+              alias reiciendis, perferendis facere.
+            </blockquote>
+          </div>
+
+          <button class="slider__btn slider__btn--left">
+            <i class="bx bxs-chevron-left"></i>
+          </button>
+          <button class="slider__btn slider__btn--right">
+            <i class="bx bxs-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="section-cta">
+        <div class="cta-container overlay">
+          <h2 class="heading-secondary">MAKE YOUR BEST STEP YET</h2>
+          <a href="#cta" class="sign-up-btn btn cta-btn">SIGN UP</a>
+        </div>
+      </section>
+    </main>
+    <div class="sign-in-modal hidden">
+      <span id="closeModalBtn" class="close">&times;</span>
+      <h2 class="form-header">Sign In</h2>
+      <form id="signInForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+
+        <button class="blue-bg" type="submit">Submit</button>
+
+        <p class="disclaimer">
+          This sign-in form is created solely for portfolio purposes. No
+          personal information, including emails or passwords, will be collected
+          or used in any way.
+        </p>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <nav class="footer-menu">
+          <h4 class="footer-header">Menu</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#cta">Order</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-collections">
+          <h4 class="footer-header">Collections</h4>
+          <ul>
+            <li><a href="#">Mens</a></li>
+            <li><a href="#">Womens</a></li>
+            <li><a href="#">Kids</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-help">
+          <h4 class="footer-header">Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Ask Us</a></li>
+            <li><a href="#">Random</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-contacts">
+          <h4 class="footer-header">Contact Us</h4>
+          <ul>
+            <li><a href="#">Phone: +234867894</a></li>
+            <li><a href="#">E-mail: hsalami612@gmail.com</a></li>
+          </ul>
+        </nav>
+        <nav class="social-media">
+          <h4 class="footer-header">Social Media</h4>
+          <ul>
+            <li><i class="bx bxl-linkedin"></i></li>
+            <li><i class="bx bxl-instagram"></i></li>
+            <li><i class="bx bxl-twitter"></i></li>
+            <li><i class="bx bxl-facebook"></i></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="copyright">
+        &copy; Copyright by
+        <a href="#" class="copyright-link">Habeeb Salami.</a> This website is
+        created for portfolio purposes and is not a real website
+      </div>
+    </footer>
+    <div class="modal-overlay hidden"></div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+/* **************** */
+/* PRODUCTS */
+/* **************** */
+
+.products-section {
+  padding: 3rem 5.4rem;
+  margin: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 5.4rem;
+}
+.wishlist-header {
+  font-family: "Bebas Neue";
+  position: absolute;
+  top: 0;
+  font-size: 4rem;
+}
+.product-box {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  padding: 2%;
+  cursor: pointer;
+}
+.product-img {
+  position: relative;
+  background-color: white;
+}
+.product-img img {
+  position: relative;
+  width: 100%;
+  transition: all 1s ease;
+}
+
+/* EMPTY FAVORITES */
+.empty-fav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-fav-msg {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.search-products-btn {
+  background-color: #0077e6;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+  padding: 1.5rem;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./images/favicon(flaticon).png"
+      type="image/s-icon"
+    />
+    <title>SneakCity | Ecommerce sneaker store</title>
+    <link rel="stylesheet" href="./css/wishlist.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script type="module" defer src="./js/wishlist.js"></script>
+  </head>
+  <body>
+    <header class="header sticky">
+      <div class="logo">
+        <a href="index.html"
+          ><div style="display: inline">SneakCity</div>
+          <span>.</span></a
+        >
+      </div>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="#about" class="main-nav-link">About</a></li>
+          <li><a href="#shop" class="main-nav-link">Shop</a></li>
+          <li><a href="#collections" class="main-nav-link">Collections</a></li>
+          <li><a href="#reviews" class="main-nav-link">Reviews</a></li>
+        </ul>
+      </nav>
+
+      <nav class="action-nav">
+        <ul class="action-nav-list">
+          <li>
+            <div class="sign-in-btn">
+              <ion-icon
+                class="icon icon-action-nav"
+                name="person-outline"
+              ></ion-icon>
+            </div>
+          </li>
+          <li>
+            <div class="wishlist-btn">
+              <ion-icon
+                class="icon icon-action-nav"
+                name="heart-outline"
+              ></ion-icon>
+            </div>
+          </li>
+          <li class="cart-list">
+            <div class="cart-icon">
+              <ion-icon
+                class="icon icon-action-nav"
+                name="cart-outline"
+              ></ion-icon>
+              <div class="cart-bubble">0</div>
+            </div>
+            <div class="mini-cart hidden">
+              <div class="view-cart-button">
+                <a href="cart.html">VIEW CART</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-btn">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+    <main>
+      <div class="loading-screen">
+        <img src="images/page-loadscreen.gif" alt="" />
+      </div>
+      <div class="toast cart-toast">
+        <i class="bx bx-list-check"></i>
+        <p>Item has been added to cart</p>
+      </div>
+      <div class="toast remove-toast">
+        <i class="bx bx-list-minus"></i>
+        <p>Item has been added to cart</p>
+      </div>
+      <div class="toast wishlist-toast">
+        <i class="bx bxs-heart"></i>
+        <p class="wish-toast-msg">Item has been added to wishlist</p>
+      </div>
+      <div class="empty-fav hidden">
+        <h3 class="empty-fav-msg">No favorites yet. Search Products</h3>
+        <a class="search-products-btn" href="product.html">Search Products</a>
+      </div>
+      <section class="products-section">
+        <h3 class="wishlist-header">WISHLIST</h3>
+
+        <div class="products-container"></div>
+      </section>
+      <div class="product-modal-container"></div>
+      <div class="sign-in-modal hidden">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <h2 class="form-header">Sign In</h2>
+        <form id="signInForm">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+
+          <button class="blue-bg" type="submit">Submit</button>
+
+          <p class="disclaimer">
+            This sign-in form is created solely for portfolio purposes. No
+            personal information, including emails or passwords, will be
+            collected or used in any way.
+          </p>
+        </form>
+      </div>
+      <div class="modal-overlay hidden"></div>
+    </main>
+  </body>
+  <footer class="footer">
+    <div class="footer-links">
+      <nav class="footer-menu">
+        <h4 class="footer-header">Menu</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#cta">Order</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-collections">
+        <h4 class="footer-header">Collections</h4>
+        <ul>
+          <li><a href="#">Mens</a></li>
+          <li><a href="#">Womens</a></li>
+          <li><a href="#">Kids</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-help">
+        <h4 class="footer-header">Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Ask Us</a></li>
+          <li><a href="#">Random</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-contacts">
+        <h4 class="footer-header">Contact Us</h4>
+        <ul>
+          <li><a href="#">Phone: +234867894</a></li>
+          <li><a href="#">E-mail: hsalami612@gmail.com</a></li>
+        </ul>
+      </nav>
+      <nav class="social-media">
+        <h4 class="footer-header">Social Media</h4>
+        <ul>
+          <li><i class="bx bxl-linkedin"></i></li>
+          <li><i class="bx bxl-instagram"></i></li>
+          <li><i class="bx bxl-twitter"></i></li>
+          <li><i class="bx bxl-facebook"></i></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="copyright">
+      &copy; Copyright by
+      <a href="#" class="copyright-link">Habeeb Salami.</a> This website is
+      created for portfolio purposes and is not a real website
+    </div>
+  </footer>
+</html>
