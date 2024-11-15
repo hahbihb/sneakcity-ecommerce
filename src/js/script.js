@@ -32,7 +32,7 @@ const init = function () {
 
   utils.updateCartBubble(cart);
 };
-
+init();
 //MOBILE MENU
 const menuBtn = document.querySelector(".menu-btn");
 const header = document.querySelector(".header");
@@ -159,5 +159,3 @@ productContainer.addEventListener("click", function (e) {
 
 //LOADING SCREEN
 window.addEventListener("load", utils.removeLoadScreen);
-
-init();

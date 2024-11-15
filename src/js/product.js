@@ -8,6 +8,22 @@ import { products } from "./modules/productsArray.js";
 let cart = JSON.parse(localStorage.getItem("cart"));
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
+//INIT FUNCTION
+const init = function () {
+  utils.updateCartBubble(cart);
+
+  //update minicart
+  cart.forEach((prod) => {
+    miniCartFn(prod);
+  });
+
+  products.forEach((product) => {
+    displayProducts(product);
+  });
+};
+
+init();
+
 // MOBILE-MENU
 const menuBtn = document.querySelector(".menu-btn");
 const header = document.querySelector(".header");
@@ -84,19 +100,3 @@ if (searchQuery) {
 
 //LOADING SCREEN
 window.addEventListener("load", utils.removeLoadScreen);
-
-//INIT FUNCTION
-const init = function () {
-  utils.updateCartBubble(cart);
-
-  //update minicart
-  cart.forEach((prod) => {
-    miniCartFn(prod);
-  });
-
-  products.forEach((product) => {
-    displayProducts(product);
-  });
-};
-
-init();
