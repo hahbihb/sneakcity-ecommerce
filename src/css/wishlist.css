@@ -33,7 +33,7 @@
 }
 .product-img {
   position: relative;
-  background-color: white;
+  background-color: inherit;
 }
 .product-img img {
   position: relative;
