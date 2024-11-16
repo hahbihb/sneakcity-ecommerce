@@ -121,6 +121,10 @@
   .main-nav {
     display: inline;
   }
+  .toast {
+    gap: 4px;
+    padding: 0.8rem 1.2rem;
+  }
 
   /* PRODUCTS */
   .shop-products-container,
