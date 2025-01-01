@@ -25,6 +25,9 @@
   position: relative;
   z-index: 3;
 }
+.hero-image img {
+  width: 100%;
+}
 .hero-image::after {
   content: "";
   display: block;
