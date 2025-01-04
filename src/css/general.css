@@ -358,16 +358,13 @@ ul {
   height: 100%;
 }
 .view-cart-button {
-  width: 100%;
+  padding: 1rem 8rem;
   background-color: #0077e6;
   height: 4rem;
   align-content: center;
   text-align: center;
-}
-.view-cart-button a {
   color: #fff;
   font-weight: 600;
-  padding: 1rem 8rem;
 }
 
 /* **************** */
